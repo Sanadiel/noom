@@ -37,11 +37,12 @@ async function getCameras() {
 async function getMedia(deviceId) {
   const initialConstrains = {
     audio: true,
-    video: { facingMode: "user" },
+    video: false
   };
   const cameraConstraints = {
     audio: true,
-    video: { deviceId: { exact: deviceId } },
+    video: false
+    //video: { deviceId: { exact: deviceId } },
   };
   try {
     myStream = await navigator.mediaDevices.getUserMedia(
@@ -57,9 +58,15 @@ async function getMedia(deviceId) {
 }
 
 function handleMuteClick() {
-  myStream
-    .getAudioTracks()
-    .forEach((track) => (track.enabled = !track.enabled));
+  if(myStream)
+  {
+    myStream
+      .getAudioTracks()
+      .forEach((track) => (track.enabled = !track.enabled));
+
+    console.log(myStream.getAudioTracks());
+  }
+    
   if (!muted) {
     muteBtn.innerText = "Unmute";
     muted = true;
@@ -69,9 +76,10 @@ function handleMuteClick() {
   }
 }
 function handleCameraClick() {
-  myStream
-    .getVideoTracks()
-    .forEach((track) => (track.enabled = !track.enabled));
+  if(myStream)
+    myStream
+      .getVideoTracks()
+      .forEach((track) => (track.enabled = !track.enabled));
   if (cameraOff) {
     cameraBtn.innerText = "Turn Camera Off";
     cameraOff = false;
@@ -174,9 +182,11 @@ function makeConnection() {
   });
   myPeerConnection.addEventListener("icecandidate", handleIce);
   myPeerConnection.addEventListener("addstream", handleAddStream);
-  myStream
-    .getTracks()
-    .forEach((track) => myPeerConnection.addTrack(track, myStream));
+
+  if(myStream)
+    myStream
+      .getTracks()
+      .forEach((track) => myPeerConnection.addTrack(track, myStream));
 }
 
 function handleIce(data) {
