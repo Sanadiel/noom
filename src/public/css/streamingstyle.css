@@ -1,0 +1,669 @@
+.iframeStream {
+    position: absolute;
+    width: 83.854vw;    /* prev 82.5vw    83.854vw */  
+    height: 100vh;
+    z-index: 2;
+}
+
+.rightside_Cover {
+    float: right;
+    position: relative;
+    /* width: 16.145vw; */
+    width: 16.145vw;
+    height: 99vh;
+    z-index: 1;    
+  }
+
+  .right_bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .top_area {
+    position: absolute;
+    right:0px;
+    top:0px;
+    width: 100%;
+    height: 25.925vh;
+    /* z-index: 2; */
+  }
+  .top_bg {
+    background-image: url(../images/99_chat/top_pro_bg.png);
+    background-size: 100%;
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    position: absolute;
+    right:0px;
+    top: 1.38vh;
+    width:15.364vw;
+    height: 24.6vh; /* 24.537 */
+    z-index: 10;
+  }
+  .mid_area {
+    position: absolute;
+    right:0px;
+    top:0px;
+    width: 100%;
+    height: 33.333vh;
+    /* 총높이 720, 패딩30, 일반높이 130 */
+    /* z-index: 2; */
+  }
+  .mid_bg {
+    position: absolute;
+    /*background-image: url(mid_bg.png); 
+     background-color: transparent; */
+    right:0px;
+    top: 27.314vh;
+    width:15.364vw;
+    height: 6.018vh; 
+    /* 일반높이 130 */
+    /* z-index: 10; */
+  }
+  .mid_button_home {
+    position: absolute;
+    top:28.333vh;
+    left: 8%;/* left 30 total 590 padding (87-70)/2 */
+    background-image: url(../images/99_chat/mid_ic_home_p.png); 
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    /*height: 16px;            make this the size of your image */
+    /*padding-left: 16px;      make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: 100%;
+
+    width:2.265vw;
+    height: 4.027vh;
+    padding:0px;
+    z-index: 12;
+  }
+
+  .mid_button_share {
+    position: absolute;
+    top:28.333vh;
+    left:22%;
+    background-image: url(../images/99_chat/mid_ic_shar_p.png); 
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    /*height: 16px;            make this the size of your image */
+    /*padding-left: 16px;      make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: 100%;
+
+    width:2.265vw;
+    height: 4.027vh;
+    padding:0px;
+    z-index: 12;
+  }
+
+  .mid_button_import {
+    position: absolute;
+    top:28.333vh;
+    left:36%;
+    background-image: url(../images/99_chat/mid_ic_consultant_p.png); 
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    /*height: 16px;            make this the size of your image */
+    /*padding-left: 16px;      make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: 100%;
+
+    width:2.265vw;
+    height: 4.027vh;
+    padding:0px;
+    z-index: 12;
+  }
+
+  .mid_button_sign {
+    position: absolute;
+    top:28.333vh;
+    left:50%;
+    background-image: url(../images/99_chat/mid_ic_sign_p.png); 
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    /*height: 16px;            make this the size of your image */
+    /*padding-left: 16px;      make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: 100%;
+
+    width:2.265vw;
+    height: 4.027vh;
+    padding:0px;
+    z-index: 12;
+  }
+
+  .mid_button_logout {
+    position: absolute;
+    top:28.333vh;
+    left:82%;
+    background-image: url(../images/99_chat/mid_ic_logout_p.png);
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    /*height: 16px;            make this the size of your image */
+    /*padding-left: 16px;      make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: 100%;
+
+    width:2.265vw;
+    height: 4.027vh;
+    padding:0px;
+    border:0px;
+    z-index: 12;
+  }
+
+  .mid_ic_logout_n.active {
+    background-image: url("../images/99_chat/mid_ic_logout_p.png");
+    position: absolute;
+    /* left: 334px; */
+    left: 8.6979vw;
+    top: 28.5185vh;
+    width: 6.979vw;
+    height: 4.0367vh;
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: cover;
+  }
+  .mid_ic_logout_n {
+    background-image: url("../images/99_chat/mid_ic_logout_n.png");
+    position: absolute;
+    /* left: 334px; */
+    left: 8.6979vw;
+    top: 28.5185vh;
+    width: 6.979vw;
+    height: 4.0367vh;
+    /* width: 134px;
+    height: 44px; */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: cover;
+  }
+  .mid_ic_shar_n.active {
+    background-image: url("../images/99_chat/mid_ic_shar_p.png");
+    position: absolute;
+    /* left: 54px; */
+    left: 1.406vw;
+    /* top: 616px; */
+    top: 28.5185vh;
+    width: 6.979vw;
+    height: 4.0367vh;
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: cover;
+  }
+  .mid_ic_shar_n {
+    background-image: url("../images/99_chat/mid_ic_shar_n.png");
+    position: absolute;
+    /* left: 54px; */
+    left: 1.406vw;
+    /* top: 616px; */
+    top: 28.5185vh;
+    width: 6.979vw;
+    height: 4.0367vh;
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: cover;
+  }
+
+
+  .chat_area {
+    position: absolute;
+    right:0px;
+    /* top:0px; */
+    top: 34.1666vh;
+    width: 100%;
+    /* height: 98.611vh; */
+    height: 64.4444vh;
+    /* 총높이 2130, 패딩30, 일반높이 1380 */
+    /* z-index: 2; */
+  }
+  .bot_bg {
+    /* background-image: url(../images/99_chat/bot_chat_2.png); */
+    background-image: url(../images/99_chat/bot_chat_bg1.png);
+    background-size: cover;
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    position: absolute;
+    right:0px;
+    /* top: 34.722vh; */
+    top: 0.5554vh;
+    width:15.364vw;
+    /* height: 63.888vh; */
+    height: 63.888vh;
+    /* 일반높이 130 */
+    /* z-index: 10; */
+  }
+  .chat_bg {
+    /* background-image: url(../images/99_chat/bot_chat_2.png); 
+    background-image: url(../images/99_chat/bot_chat_bg2.png);
+    background-size: 100%;
+    background-color: transparent; 
+    background-repeat: no-repeat; */
+    background-color: rgb(217, 217, 217);
+    opacity: 0.2;
+    position: absolute;
+    right: 0px;
+    top: 2vh;
+    width: 14.3vw;
+    height: 58.1vh;
+    /* z-index: 10; */
+    left: 1.58vw;
+  }
+  .bg_Main {
+    background-color: #fafafa;
+    height: 100vh;
+  }
+  .level_button_0 {
+    top:0;
+    left:8.076%;
+    background-image: url(../images/99_chat/bot_btn_pverview_n.png);
+    position: absolute;
+    
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    /*height: 16px;            make this the size of your image */
+    /*padding-left: 16px;      make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: 100%;
+
+    width:1.875vw;
+    height: 9.259vh;
+    padding:0px;
+    border:0px;
+    z-index: 12;
+  }
+
+  .level_button_1 {
+    top:0;
+    left:23.981%;
+    background-image: url(../images/99_chat/bot_btn_preferences_n.png);
+    position: absolute;
+    
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    /*height: 16px;            make this the size of your image */
+    /*padding-left: 16px;      make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: 100%;
+
+    width:1.875vw;
+    height: 9.259vh;
+    padding:0px;
+    border:0px;
+    z-index: 12;
+  }
+
+  .level_button_2 {
+    top:0;
+    left:39.717%;
+    background-image: url(../images/99_chat/bot_btn_select_n.png);
+    position: absolute;
+    
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    /*height: 16px;            make this the size of your image */
+    /*padding-left: 16px;      make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: 100%;
+
+    width:1.875vw;
+    height: 9.259vh;
+    padding:0px;
+    border:0px;
+    z-index: 12;
+  }
+
+  .level_button_3 {
+    top:0;
+    left:55.484%; /* 56.284%; */
+    background-image: url(../images/99_chat/bot_btn_comparison_n.png);
+    position: absolute;
+    
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    /*height: 16px;            make this the size of your image */
+    /*padding-left: 16px;      make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: 100%;
+
+    width:1.875vw;
+    height: 9.259vh;
+    padding:0px;
+    border:0px;
+    z-index: 12;
+  }
+
+  .level_button_4 {
+    top:0;
+    left:71.1895%;
+    background-image: url(../images/99_chat/bot_btn_detailed_n.png);
+    position: absolute;
+    
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    /*height: 16px;            make this the size of your image */
+    /*padding-left: 16px;      make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: 100%;
+
+    width:1.875vw;
+    height: 9.259vh;
+    padding:0px;
+    border:0px;
+    z-index: 12;
+  }
+
+  .level_button_5 {
+    top:0;
+    left:86.9255%;
+    background-image: url(../images/99_chat/bot_btn_meta_n.png);
+    position: absolute;
+    
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    /*height: 16px;            make this the size of your image */
+    /*padding-left: 16px;      make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+    background-size: 100%;
+
+    width:1.875vw;
+    height: 9.259vh;
+    padding:0px;
+    border:0px;
+    z-index: 12;
+  }
+
+  /* #flex-container {
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.8s linear;
+    margin-left : 45px;
+  }
+
+  .message-row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+  } */
+
+  #flex-container_outer {
+    /* margin-top: 180px; */
+    margin-top: 11vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.8s linear;
+    height: 70%;
+    /* margin-left : 45px;
+    overflow-y: auto; */
+  }
+
+  #flex-container_inner {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    width: 88%;
+    margin-left: 10%;
+    margin-right: 2%;
+    z-index: 9;
+    /* margin-left : 45px;
+    overflow-y: auto; */
+  }
+
+  #flex-container_inner::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+  }
+
+  #flex-container_inner::-webkit-scrollbar-thumb {
+      height: 30%; /* 스크롤바의 길이 */
+      background: #4c993d; /* 스크롤바의 색상 */
+      border-radius: 10px;
+  }
+
+  #flex-container_inner::-webkit-scrollbar-track {
+      background: #cccccc; /* 스크롤바 뒷 배경 색상 */
+      
+      width: 10px;
+      
+      /* background-color: red; */
+      background-clip: content-box;
+      border-radius: 20px;
+  }
+
+  .message-row {
+    /* flex: 1 1 auto;
+    display: flex;
+    flex-direction: column; */
+    width: 75%;
+    display: flex;
+    margin-bottom: 25px;
+  }
+  
+  .message-row img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .message__author {
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .message__info {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .message__bubble {
+    background-color: white;
+    padding: 13px;
+    font-size: 18px;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    margin-right: 5px;
+    z-index: 10;
+  }
+  
+  .message__time,
+  .message__author {
+    opacity: 0.8;
+    font-size: 14px;
+  }
+  
+  .message-row--own {
+    justify-content: flex-end;
+    width: 95%;
+  }
+  
+  .message-row--own .message__bubble {
+    background-color: yellow;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 15px;
+    margin-right: 0px;
+    margin-left: 5px;
+  }
+  
+  .message-row--own .message__info {
+    flex-direction: row-reverse;
+  }
+
+  .flex-notification {
+    color: white;
+    background-color: #92a4b2;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-left: 5%;
+  }
+
+  #myusername {
+    position: absolute;
+    top: 14.2%;
+    left: 23%;
+    color: #5796d9;
+    z-index: 10;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+/* voice */
+#top_ic_profile_n_1 {
+  /* left: 3565px;
+  top: 458px;
+  width: 74px;
+  height: 74px; */
+}
+
+.top_ic_profile_n {
+  background-image: url("../images/99_chattop_ic_profile_n.png");
+  position: absolute;
+  z-index: 3140;
+}
+
+/* chat */
+
+#bot_chat_submit {
+  background-image: url("../images/99_chat/bot_chat_input_enter_n.png");
+  background-size: cover;
+  position: fixed;
+  width: 1.6vw;
+  height: 1.6vw;
+  margin-left : 14.5vw;
+  bottom: 1.6vw;
+  z-index: 2992;
+  border: 0px;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.bot_chat_submit.active {
+  background-image: url("../images/99_chat/bot_chat_input_enter_p.png");
+  background-size: cover;
+  position: fixed;
+  width: 1.6vw;
+  height: 1.6vw;
+  margin-left : 14.5vw;
+  bottom: 1.6vw;
+  z-index: 2992;
+  border: 0px;
+  padding: 1px;
+}
+
+
+#bot_chat_input:focus {
+  outline:none;
+}
+
+
+#bot_chat_input {
+  background-color: rgb(217, 217, 217);
+  opacity: 0.702;
+  position: fixed;
+  width: 12.9vw;
+  bottom: 1.6vw;
+  margin-left : 1.6vw;
+  height: 1.6vw;
+  z-index: 2991;
+  border: 1px;
+  padding: 0px;
+}
+
+@media screen and (max-width: 1920px) {
+  .bot_chat_input {
+    background-color: rgb(217, 217, 217);
+    opacity: 0.702;
+    position: fixed;
+    width: 12.9vw;
+    bottom: 1.6vw;
+    margin-left : 10px;
+    height: 1.6vw;
+    z-index: 2991;
+    border: 1px;
+    padding: 0px;
+  }
+}
+
+/* body {
+    margin:0;
+} */
+
+.topgrid_container {
+  left: 58px;
+  top: 58px;
+
+  
+}
+
+.topgrid_item {
+  
+}
+
+.item_icon { 
+  /* width: 74px;
+  height: 74px; */
+  width: 37px;
+  height: 37px;
+}
