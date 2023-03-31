@@ -507,7 +507,7 @@
   }
   
   .message__bubble {
-    background-color: white;
+    background-color: #e5bd95;
     padding: 13px;
     font-size: 18px;
     border-radius: 15px;
@@ -528,7 +528,7 @@
   }
   
   .message-row--own .message__bubble {
-    background-color: yellow;
+    background-color: #a1c3e5;
     border-top-right-radius: 0px;
     border-top-left-radius: 15px;
     margin-right: 0px;
@@ -541,7 +541,7 @@
 
   .flex-notification {
     color: white;
-    background-color: #92a4b2;
+    background-color: #4c993d;
     padding: 15px;
     font-size: 14px;
     border-radius: 25px;
@@ -631,6 +631,46 @@
   padding: 0px;
 }
 
+
+
+/* body {
+    margin:0;
+} */
+
+.topgrid_container {
+  display: grid;
+  position: absolute;
+  
+  left: 58px;
+  top: 58px;  
+}
+
+.topgrid_item {
+  
+}
+
+.item_icon { 
+  /* width: 74px;
+  height: 74px; */
+  background-image: url("../images/99_chat/top_ic_profile_p.png");
+  background-size: cover;
+  width: 37px;
+  height: 37px;
+}
+
+.item_mute { 
+  background-image: url("../images/99_chat/top_ic_mic_p.png");
+  background-size: cover;
+  width: 32px;
+  height: 49px;
+}
+.item_mute.active { 
+  background-image: url("../images/99_chat/top_ic_mic_c.png");
+  background-size: cover;
+  width: 32px;
+  height: 49px;
+}
+
 @media screen and (max-width: 1920px) {
   .bot_chat_input {
     background-color: rgb(217, 217, 217);
@@ -644,26 +684,24 @@
     border: 1px;
     padding: 0px;
   }
-}
 
-/* body {
-    margin:0;
-} */
+  .topgrid_container {
+    display: grid;
+    position: absolute;
+    
+    left: 29px;
+    top: 29px;  
+  }
 
-.topgrid_container {
-  left: 58px;
-  top: 58px;
-
+  .item_icon { 
+    /* width: 74px;
+    height: 74px; */
+    width: 37px;
+    height: 37px;
+  }
   
-}
-
-.topgrid_item {
-  
-}
-
-.item_icon { 
-  /* width: 74px;
-  height: 74px; */
-  width: 37px;
-  height: 37px;
+  .item_mute { 
+    width: 32px;
+    height: 49px;
+  }
 }

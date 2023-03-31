@@ -41,8 +41,7 @@ function button_logout() {
 }
 
 function Level_Control(level) {
-    // document.getElementById("iframeStream").contentWindow.
-    document.getElementById("iframeStream").contentWindow.emitUIInteraction(level);
+    //document.getElementById("iframeStream").contentWindow.emitUIInteraction(level);
 }
 
 let Chat_container;// = document.getElementById("flex-container");
@@ -52,29 +51,47 @@ function load(Name) {
     //username = name;
     username = Name;
     Chat_container = document.getElementById("flex-container_inner");
-    appendChatLog("Towa", "라면먹고 싶다", "23:00")
+    //addMessage("Towa", "라면먹고 싶다", "23:00")
 }
 
-function appendChatLog(who, logText, time) {    
+function addMessage(who, logText, time) {
 
+    //console.log(`${Chat_container.scrollHeight} === ${Chat_container.scrollTop} + ${Chat_container.offsetHeight}`)
     if(Chat_container.scrollHeight === Math.ceil(Chat_container.scrollTop+Chat_container.offsetHeight))
     {
         DocuAppendChatMessage(who, logText, time);
 
-        Chat_container.scrollTop = Chat_container.scrollheight;
+        Chat_container.scrollTop = Chat_container.scrollHeight;
     }
     else
     {
         DocuAppendChatMessage(who, logText, time);
     }
+}
 
+function addMyMessage(msg) {
+    let today = new Date();
+    let hours = today.getHours(); // 시
+    let minutes = today.getMinutes();  // 분
+
+    //console.log(`${Chat_container.scrollHeight} === ${Chat_container.scrollTop} + ${Chat_container.offsetHeight}`)
+    if(Chat_container.scrollHeight === Math.ceil(Chat_container.scrollTop+Chat_container.offsetHeight))
+    {
+        DocuAppendChatMessage(username, msg, `${hours}:${minutes}`);
+
+        Chat_container.scrollTop = Chat_container.scrollHeight;
+    }
+    else
+    {
+        DocuAppendChatMessage(username, msg, `${hours}:${minutes}`);
+    }
 }
 
 function DocuAppendChatMessage(who, logText, time)
 {
     if(who == username){
         const divElement = document.createElement("div");
-        divElementother.className = "message-row message-row--own";
+        divElement.className = "message-row message-row--own";
         divElement.innerHTML =
         `<div class="message-row__content">
             <div class="message__info">
@@ -103,6 +120,23 @@ function DocuAppendChatMessage(who, logText, time)
     }
 }
 
-function appendChatLog_Welcome(name) {
+function addMessage_Welcome(name) {
 
+    if(Chat_container.scrollHeight === Math.ceil(Chat_container.scrollTop+Chat_container.offsetHeight))
+    {
+        const divElement = document.createElement("div");
+        divElement.className = "flex-notification";
+        divElement.innerHTML = `${name} 님이 입장하셨습니다.`
+        Chat_container.append(divElement);      
+
+        Chat_container.scrollTop = Chat_container.scrollHeight;
+    }
+    else
+    {
+        const divElement = document.createElement("div");
+        divElement.className = "flex-notification";
+        divElement.innerHTML = `${name} 님이 입장하셨습니다.`
+        Chat_container.append(divElement);
+    }
 }
+

@@ -71,6 +71,11 @@ function handleMuteClick() {
   }
 }
 
+function mute_click(event) {
+  event.currentTarget.classList.toggle("active");
+  handleMuteClick();
+}
+
 // async function handleCameraChange() {
 //   await getMedia(camerasSelect.value);//카메라 셀렉하는 부분에서 텍스트값?
 //   if (myPeerConnection) {
@@ -109,7 +114,10 @@ handleWelcomeSubmit();
 
 // Socket Code
 
-socket.on("welcome", async () => {
+socket.on("welcome", async (visiter) => {
+  addMessage_Welcome(visiter);
+  
+  //addMessage(`${user} arrived!`);
   myDataChannel = myPeerConnection.createDataChannel("chat");
   myDataChannel.addEventListener("message", (event) => console.log(event.data));
   console.log("made data channel");
@@ -185,5 +193,18 @@ function submitText(event) {
   event.preventDefault();
 
   const TexttoSub = document.getElementById("bot_chat_input");
+  const value = TexttoSub.value;  
+  socket.emit("new_message", TexttoSub.value, roomName, () => {
+    addMyMessage(`${value}`);
+  });
+  // addMessage(`You: ${value}`);
+
   TexttoSub.value = "";
 }
+
+// socket.on("new_message", addMessage);
+socket.on("new_message", (NickName, msg, time) => {
+  addMessage(NickName, msg, time);
+  //myPeerConnection.addIceCandidate(ice);
+});
+

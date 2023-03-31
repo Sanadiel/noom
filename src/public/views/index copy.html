@@ -16,16 +16,14 @@
 </head>
 <body onload="load(`${username}`)">
   <!-- <body onload="load(${username})"> -->
-    <!-- <div class="bg_Main" focus_iframe> -->
     <div class="bg_Main" focus_iframe>
         <iframe sandbox="allow-scripts allow-downloads" src="https://grmvs.com:8010/?hoveringMouse=true" id="iframeStream" class="iframeStream" frameborder="0" scrolling="no" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class='rightside_Cover'>            
+        <div class='rightside_Cover' onclick="focus_iframe()">            
             <div class='top_area' onclick="focus_iframe()">
-                <img src="public/images/opacity.png" id="top_bg" class="top_bg">
+                <img src="../images/opacity.png" id="top_bg" class="top_bg">
                 <div class="topgrid_container">
                   <div class = topgrid_item>
                     <img src="public/images/opacity.png" class="item_icon">
-                    <img src="public/images/opacity.png" class="item_mute">
                   </div>
                   <div class = topgrid_item></div>
                   <div class = topgrid_item></div>
@@ -38,11 +36,11 @@
                   <div class = topgrid_item></div>
                 </div>
 
-                <img src="public/images/opacity.png" id="self_mute" class="user1" onclick="handleMuteClick()">
+                <img src="../images/opacity.png" id="self_mute" class="user1" onclick="handleMuteClick()">
                 <!-- <p class="h3" id="myusername">${username}</p> -->
                 <p class="h3" id="myusername">Sana</p>
 
-                <img src="public/images/opacity.png" id="user2_mute" class="user2">
+                <img src="../images/opacity.png" id="user2_mute" class="user2">
                 <!-- <p class="h3" id="myusername">${username2}</p> -->
             </div>
             <div class='mid_area' onclick="focus_iframe()">
@@ -54,16 +52,44 @@
                 <button type="button" class="mid_ic_logout_n" id="mid_button_logout" onclick="button_logout()"></button>
             </div>
             <div class="chat_area">
-                <img src="public/images/opacity.png" id="bot_bg" class="bot_bg">
-                <img src="public/images/opacity.png" id="chat_bg" class="chat_bg">
+                <img src="../images/opacity.png" id="bot_bg" class="bot_bg">
+                <img src="../images/opacity.png" id="chat_bg" class="chat_bg">
                 <button type="button" class="level_button_0" onclick="Level_Control(0)"></button>
                 <button type="button" class="level_button_1" onclick="Level_Control(1)"></button>
                 <button type="button" class="level_button_2" onclick="Level_Control(2)"></button>
                 <button type="button" class="level_button_3" onclick="Level_Control(3)"></button>
                 <button type="button" class="level_button_4" onclick="Level_Control(4)"></button>
                 <button type="button" class="level_button_5" onclick="Level_Control(5)"></button>
-                <div id="flex-container_outer" onclick="focus_iframe()">
+                <div id="flex-container_outer">
                   <div id="flex-container_inner">
+                    <div class="flex-notification">
+                        Tuesday, June 30, 2020
+                    </div>
+                
+                    <div class="message-row">
+                      <div class="message-row__content">                          
+                        <div class="message__info">
+                          <span class="message__bubble">
+                              [Nicolas]
+                              Hi!</span>
+                          <span class="message__time">21:27</span>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <div class="message-row message-row--own">
+                      <div class="message-row__content">                            
+                          <div class="message__info">
+                              <span class="message__bubble">
+                                  [${username}] <br>
+                                  Hi nice to meet you! <br>
+                                  Tab <br>
+                                  Tab <br>
+                                  Tab</span>
+                              <span class="message__time">21:27</span>
+                          </div>
+                      </div>
+                    </div>
                   </div>                      
                 </div>
                 <form class="js-form form">
